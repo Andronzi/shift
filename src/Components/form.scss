@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(238, 238, 238);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    width:  80vw;
+    height: 80vh;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+input {
+    display: block;
+    border-radius: 4px;
+    outline: none;
+    text-shadow: none;
+    width: 200px;
+    height: 30px;
+    margin-left: 30px;
+}
+
+.special {
+    margin-left: 0px;
+}
+
+input:nth-child(0) {
+    margin-left: 0px;
+}

@@ -1,4 +1,5 @@
 import { FormEvent, useState } from 'react';
+import axios from 'axios';
 import isValid from '@utils/helpers/dateValidation.helper';
 import Input from '@components/Input/Input';
 import './form.scss';
@@ -7,7 +8,14 @@ export default function Form() {
     const [dateValue, setDateValue]: [string, Function] = useState(null);
     const handleSubmit = (event: FormEvent) => {
         event.preventDefault();
-        console.log(isValid(dateValue));
+        
+        if (isValid(dateValue)) {
+            axios.post("https://shift-summer-2022-backend.herokuapp.com/api/create/order/", {
+                order: {
+                    date: dateValue
+                }
+            })
+        }
     }
 
     return (
